@@ -1,10 +1,12 @@
 # Clinical and Genetic Insights of Parkinson's Disease in a Mexican Cohort (MEX-PD): Highlighting Latino's Diversity
 
 `GP2 ❤️ Open Science 😍`
+
 [DOI pending]
+
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-**Last Updated:** March 2025
+**Last Updated:** April 2025
 
 ## Summary
 This repository contains the code and data analysis pipelines used in our manuscript **"Clinical and Genetic Insights of Parkinson's Disease in a Mexican Cohort: Highlighting Latino's Diversity"**. Our study provides a comprehensive look at both clinical and genetic factors contributing to Parkinson's Disease (PD) in a diverse Latino population
@@ -40,8 +42,6 @@ Lázaro-Figueroa A., Reyes-Pérez P., Morelos-Figaredo E., Guerra-Galicia C.M., 
     * Males should have F-statistic > 0.8
 * 1.8 Removal of Redundant Variants: Variants that are A/T or C/G were removed due to the risk of strand bias
 * 1.9 Duplicate Variants: Duplicate variants are identified, and the one with the least missing data is retained.
-
-    
 2. xx
 3. xx
 4. xx
@@ -68,8 +68,7 @@ analyses/
 | `00_Lazaro2024etal_GP2examplenotebook.ipynb`       | Jupyter Notebook demonstrating the genetic analysis of the AMR population from GP2 data (also applies to other ancestries and the MEX-PD cohort) |
 | `01_Lazaro2024_create_freq_plots.R`       | Creates bar plots showing the frequency of selected SNPs across different cohorts and populations |
 | `02_Lazaro2024etal_Table1.R`        | Contains data manipulation, as well as descriptive and inferential analysis for Table 1                  |
-| `03_Lazaro2024etal_Table2.R`        | Contains data manipulation, as well as descriptive and inferential analysis for Table 2
-   |
+| `03_Lazaro2024etal_Table2.R`        | Contains data manipulation, as well as descriptive and inferential analysis for Table 2 |
 | `04_Lazaro2024etal_Figure1.R`       | Manipulates data and creates maps of Mexico showing registry frequencies |
 | `05_Lazaro2024etal_Figure2.R`       | Manipulates data and creates figures for clinical assessments |
 
