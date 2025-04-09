@@ -89,8 +89,7 @@ analyses/
 | `00_Lazaro2024etal_GP2examplenotebook.ipynb`       | Jupyter Notebook demonstrating the genetic analysis of the AMR population from GP2 data (also applies to other ancestries and the MEX-PD cohort) |
 | `01_Lazaro2024_create_freq_plots.R`       | Creates bar plots showing the frequency of selected SNPs across different cohorts and populations |
 | `02_Lazaro2024etal_Table1.R`        | Contains data manipulation, as well as descriptive and inferential analysis for Table 1                  |
-| `03_Lazaro2024etal_Table2.R`        | Contains data manipulation, as well as descriptive and inferential analysis for Table 2
-   |
+| `03_Lazaro2024etal_Table2.R`        | Contains data manipulation, as well as descriptive and inferential analysis for Table 2 |
 | `04_Lazaro2024etal_Figure1.R`       | Manipulates data and creates maps of Mexico showing registry frequencies |
 | `05_Lazaro2024etal_Figure2.R`       | Manipulates data and creates figures for clinical assessments |
 
