@@ -1,7 +1,6 @@
-# Clinical and Genetic Insights of Parkinson's Disease in a Mexican Cohort (MEX-PD): Highlighting Latino's Diversity
+# Clinical and Genetic Insights of Parkinson's Disease in a Mexican Cohort: Highlighting Latino's Diversity
 
 `GP2 ❤️ Open Science 😍`
-
 [DOI pending]
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
@@ -29,6 +28,7 @@ Lázaro-Figueroa A., Reyes-Pérez P., Morelos-Figaredo E., Guerra-Galicia C.M., 
 
 
 ## Workflow
+*FOR MEX-PD DATA*
 
 1. Quality control (QC) pipeline: https://github.com/MataLabCCF/GWASQC
 * 1.1 Sample Missing Data: Samples with more than 5% missing data was excluded
@@ -42,9 +42,30 @@ Lázaro-Figueroa A., Reyes-Pérez P., Morelos-Figaredo E., Guerra-Galicia C.M., 
     * Males should have F-statistic > 0.8
 * 1.8 Removal of Redundant Variants: Variants that are A/T or C/G were removed due to the risk of strand bias
 * 1.9 Duplicate Variants: Duplicate variants are identified, and the one with the least missing data is retained.
-2. xx
-3. xx
-4. xx
+
+2. Ancestry Estimation Pipeline: https://github.com/MataLabCCF/AdmixtureWithReference
+
+* 2.1 LD Pruning: Linkage disequilibrium pruning was performed using PLINK with a window size of 200 SNPs, step size of 50 SNPs, and an r² threshold of 0.2.
+* 2.2 Merging with Reference Dataset: Study data were merged with a subset of non-admixed individuals from the 1000 Genomes Project (Byrska-Bishop et al. 2022), including African (AFR), East Asian (EAS), South Asian (SAS), European (EUR), and Native American (NAT) meta-populations (Shriner et al. 2023).
+* 2.3 PCA: Principal Component Analysis (PCA) was performed on the merged dataset using PLINK 2.
+* 2.4 Admixture Analysis: ADMIXTURE 1.3 (https://dalexander.github.io/admixture/) was run in supervised mode to estimate ancestry proportions.
+
+3. Variant Frequency Calculation and Association Analysis
+* 3.1 Variant Selection: A curated variant list  was compiled based and stored as input file.
+* 3.2 Minor Allele Frequency Calculation: MAF for the selected variants was calculated separately in PD cases and controls using PLINK 1.9.
+* 3.3 Association Analysis: GLM testing was conducted using PLINK 2, adjusting for age, sex, and the first five principal components.
+
+
+*FOR GP2 DATA*
+
+1. GP2 Variant Frequency Calculation and Association Analysis 
+* 1.1 Environment Setup: Python libraries and functions, set paths
+* 1.2 Installing Packages: PLINK
+* 1.3 Data Preparation: copying over files, and formatting covariate file, remove related samples
+* 1.4 Case/Control MAF Calculation: MAF for the selected variants was calculated separately in PD cases and controls using PLINK 1.9.
+* 1.5 Association Analysis: GLM testing was conducted using PLINK 2, adjusting for age, sex, and the first five principal components..
+
+
 
 # Repository Orientation 
 - The `analyses/` directory includes all analyses discussed in the manuscript
@@ -68,7 +89,8 @@ analyses/
 | `00_Lazaro2024etal_GP2examplenotebook.ipynb`       | Jupyter Notebook demonstrating the genetic analysis of the AMR population from GP2 data (also applies to other ancestries and the MEX-PD cohort) |
 | `01_Lazaro2024_create_freq_plots.R`       | Creates bar plots showing the frequency of selected SNPs across different cohorts and populations |
 | `02_Lazaro2024etal_Table1.R`        | Contains data manipulation, as well as descriptive and inferential analysis for Table 1                  |
-| `03_Lazaro2024etal_Table2.R`        | Contains data manipulation, as well as descriptive and inferential analysis for Table 2 |
+| `03_Lazaro2024etal_Table2.R`        | Contains data manipulation, as well as descriptive and inferential analysis for Table 2
+   |
 | `04_Lazaro2024etal_Figure1.R`       | Manipulates data and creates maps of Mexico showing registry frequencies |
 | `05_Lazaro2024etal_Figure2.R`       | Manipulates data and creates figures for clinical assessments |
 
