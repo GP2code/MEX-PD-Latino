@@ -1,9 +1,10 @@
 # Clinical and Genetic Insights of Parkinson's Disease in a Mexican Cohort: Highlighting Latino's Diversity
 
 `GP2 ❤️ Open Science 😍`
-[DOI pending]
 
+[![DOI](https://zenodo.org/badge/960049478.svg)](https://doi.org/10.5281/zenodo.15185376)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 
 **Last Updated:** April 2025
 
